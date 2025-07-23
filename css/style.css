@@ -1,0 +1,343 @@
+*{margin: 0; padding: 0;}
+
+ol, li{list-style-position: inside;}
+.inner-content li {text-align:left; margin-left: 20px; line-height: 1.8;}
+.inner-content p{margin-top:30px; line-height: 1.8;}
+.inner-content .heading{margin-top:0;}
+
+address{font-style:normal;}
+
+.inner-content.tengah
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body{
+	width:100%;
+	background:white;
+	font-family:Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size:17px;
+	color:#FFF;
+	margin: 0 auto;
+}
+
+.nav i{border: solid black; border-width: 0 1px 1px 0; display: inline-block; padding: 3px;}
+.down {transform: rotate(45deg); -webkit-transform: rotate(45deg);}
+
+#menu{padding-left: 100px;}
+#logo{float: left; height: 55px;}
+#whatslogo{float: right; height: 50px;}
+#grad{background-image: linear-gradient(to right, #ffdca2, #edf8c9);}
+
+.nav{width: 100%; max-width: 1200px; margin: 0 auto; padding-top: 10px; padding-bottom: 10px; background: transparent; font-size: 17px; z-index:1; height:50px; position: relative;}
+
+/*Strip the ul of padding and list styling*/
+.nav ul 
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	z-index: -1;
+}
+
+/*Create a horizontal list with spacing*/ 
+.nav li 
+{
+	display:inline-block;
+	float: left;
+	margin-right: 8px;
+	width:90px;
+}
+
+.hidden li{width: 250px;}
+.hidden li:hover{font-weight:700;}
+
+/*Hover state for top level links*/
+.nav a:hover{font-weight:700;}
+
+/*Style for menu links*/
+.nav li a {
+	display:block;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	color: black;
+	text-decoration: none;
+	padding: 0px 6px;
+}
+
+/*Style for dropdown links*/
+.nav li:hover ul a {
+	background: #ffdca2;
+	color: black;
+	height: 40px;
+	line-height: 40px;
+	padding: 10px;
+}
+
+/*Hide dropdown links until they are needed*/
+.nav li ul {
+	display: none;
+}
+
+/*Display the dropdown on hover*/
+.nav ul li a:hover + .hidden, .hidden:hover {
+	display: block;
+}
+
+/*Style 'show menu' label button and hide it by default*/
+.nav .show-menu {
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 17px;
+	color: black;
+	background: #fff;
+	text-align: center;
+	padding: 15px 0;
+	cursor: pointer;
+	display: none;
+}
+
+.numbertext,.slideArrow{display: none;}
+
+/*Hide checkbox*/
+input[type=checkbox]{
+    display: none;
+    -webkit-appearance: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
+
+/*Responsive Styles*/
+
+@media screen and (max-width : 1000px){
+	
+	body{font-size:16px;}
+	
+	/*Make dropdown links appear inline*/
+	.nav ul {
+		position: static;
+		display: none;
+	}
+	/*Create vertical spacing*/
+	.nav li {
+		margin-bottom: 1px;
+	}
+	/*Make all menu links full width*/
+	.nav ul li{
+		width: 100%;
+	}
+	/*Display 'show menu' link*/
+	.nav .show-menu {
+		display: block;
+		width:100%;
+		background: transparent;
+	}
+	
+	.nav .hidden li{display: inline-block; width: 100%;}
+	.nav{padding-top: 2px; padding-bottom: 25px; height: 30px;}	
+	#show-menu:checked +#example:before{content: "";}
+	#menu{padding-left: 0;}
+	#logo{display: none;}
+	#whatslogo{width: 140px; height: 47px; padding: 0;}
+	
+
+.inner-content #M1, .inner-content #M2{display: none;}
+	
+	.inner-content .column {width: 100%; float: none; }
+	.inner-content .image {width: 80%; margin: 0 auto;}
+	
+	.foot ul li{width: 100%; height: 40px; background: transparent; line-height: 20px; margin-bottom: 0px;}
+	.foot ul li a {background: transparent;}
+	.footer .copyright{background: tranparent; padding-bottom: 10px;}
+}
+
+
+.inner-content{
+	max-width: 1200px;
+	width:95%;
+	min-height: 800px;
+	padding:10px;
+	margin: 0 auto;
+	padding-bottom: 10px;
+	background:transparent;
+	color:#000;
+	border-style: solid;
+	border-width:thin;
+	border-color: rgba(0, 0, 0, 0.2);
+}
+
+.sub-menu{position:absolute; visibility:hidden; z-index:2}
+.nav li:hover .sub-menu{visibility:visible; margin:0 -65px; background:black; width:80px; padding-bottom:10px;}      /*-65px control the position of background*/
+.nav .sub-menu li a{position:relative; color:white !important;line-height:30px;font-size:17px; height:30px; width:160px; margin:0 auto; text-align:left;}  /*This control the text*/
+.sub-menu li{position:relative; display:block; border-bottom:1px dashed #7575FF; width:160px; right:65px;}			/*This control the dash line*/
+.sub-menu li a:hover{text-decoration:none; color:indianRed !important; background:none}
+
+.clear{clear:both;}
+a{text-decoration:none; color:#30C;}
+a:hover{text-decoration:underline; color:black}
+.warna{color:white;}
+
+.box {box-sizing: border-box; border-style: hidden;}
+.column {float: left; width: 30%; margin: 0px 15px 10px 0px;}					/*top right bottom left*/
+.row::after {content: ""; clear: both; display: table;}
+.container {position: relative; width: 100%;}
+.news3position{position:auto; top: 10px; left: 560px;}
+.headerTitle{text-align: center; background:#FFF; font-size:17px;}
+.inner-contentMainPageHeader{width:960px; margin: 0 auto; background:red; color:#000; border-style:hidden; border-width:thin; border-color: #000}
+
+
+hr {
+    border: none;
+    height: 1px;
+    /* Set the hr color */
+    color: rgba(0, 0, 0, 0.2); /* old IE */
+    background-color: rgba(0, 0, 0, 0.2); /* Modern Browsers */
+}
+
+.image 
+{
+	opacity: 1;
+	display: block;
+	width: 100%;
+  /*transition: .5s ease;
+  backface-visibility: hidden;*/
+}
+
+.container:hover .image
+{
+	opacity: 1;
+	color: white;
+	box-shadow: 0 5px 15px #afe0f5;
+}
+
+h1, h2, h3{font-weight:normal}
+.heading{font-size:17px; margin:0 0 10px; padding:0;}															/*Heading for every page*/
+
+
+.news-box{margin:0 0 20px; border-bottom:1px dashed #e2e2e2; padding:0 0 20px}
+.news-box-left{float:left; width:25%;}
+.news-box-right{float:right; width:70%;}
+
+.footer{width: 100%; height: 80px;}
+.foot ul{margin: 0 auto; padding-top: 10px; text-align: center;}
+.foot ul li{text-decoration: none; display: inline-block;}
+.foot ul li a{padding: 0 20px; color: #616161; font-weight: 500;}
+.foot ul li a:hover{color: #8000ff; text-decoration: none;}
+.copyright{margin: 0 auto; padding-top: 10px; text-align: center; color: #616161;}
+
+
+/*NEW CSS added on 20/05/2023*/
+.w3-display-topleft{position:absolute;left:0;top:0}.w3-display-topright{position:absolute;right:0;top:0}
+.w3-display-bottomleft{position:absolute;left:0;bottom:0}.w3-display-bottomright{position:absolute;right:0;bottom:0}
+.w3-display-middle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}
+.w3-display-left{position:absolute;top:50%;left:0%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%)}
+.w3-display-right{position:absolute;top:50%;right:0%;transform:translate(0%,-50%);-ms-transform:translate(0%,-50%)}
+.w3-display-topmiddle{position:absolute;left:50%;top:0;transform:translate(-50%,0%);-ms-transform:translate(-50%,0%)}
+.w3-display-bottommiddle{position:absolute;left:50%;bottom:0;transform:translate(-50%,0%);-ms-transform:translate(-50%,0%)}
+
+.w3-modal{z-index:3;display:none;position:fixed;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.5)}
+
+.w3-card,.w3-card-2{box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)}
+.w3-card-4,.w3-hover-shadow:hover{box-shadow:0 40px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)}
+
+.w3-spin{animation:w3-spin 2s infinite linear}@keyframes w3-spin{0%{transform:rotate(0deg)}100%{transform:rotate(359deg)}}
+.w3-animate-fading{animation:fading 10s infinite}@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+.w3-animate-opacity{animation:opac 0.8s}@keyframes opac{from{opacity:0} to{opacity:1}}
+.w3-animate-top{position:relative;animation:animatetop 0.4s}@keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}
+.w3-animate-left{position:relative;animation:animateleft 0.4s}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}}
+.w3-animate-right{position:relative;animation:animateright 0.4s}@keyframes animateright{from{right:-300px;opacity:0} to{right:0;opacity:1}}
+.w3-animate-bottom{position:relative;animation:animatebottom 0.4s}@keyframes animatebottom{from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}}
+.w3-animate-zoom {animation:animatezoom 0.6s}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+
+/* Four classes below are used together */
+.buttonGeneral{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.buttonBtoW{
+  background-color: white;
+  color: black;
+  border: 1px solid #555555;
+  margin-bottom: 20px;
+}
+
+.buttonBtoW:hover{
+  background-color: #555555;
+  color: white;
+}
+
+.centerbuttonBtoW{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Two classes below are used together */
+.buttonLyric{
+	float: left;
+	line-height: 1.8;
+	font-weight: 500;
+	background-color: #FFBD33;
+	opacity: 30%;
+	color: black;
+	border: 0px solid #555555;
+	padding: 15px 32px;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 8px;
+	transition: 0.5s;
+	width: 100%;
+	display: block;
+	margin-bottom: 10px;
+}
+
+.buttonLyric:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+	opacity: 100%;
+}
+
+/* Four classes below are used for fonts */
+.googleAudioWide{font-family: "Audiowide", sans-serif;}
+.googleCaveat{font-family: 'Caveat', cursive; font-size: 17px;}
+
+/*https://transfonter.org - Online @font-face generator — Transfonter
+Upload the ttf and convert to font-face, it will generate a set of css.
+
+@font-face {
+    font-family: 'STKaiti';
+    src: url('fonts/STKaiti.woff2') format('woff2'),
+        url('fonts/STKaiti.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+.stkaiti{font-family: 'STKaiti'; font-size: 17px; font-weight: 600;}*/
+
+@font-face {
+    font-family: 'YRDZST';
+    src: url('fonts/YRDZST-Semibold.woff2') format('woff2'),
+        url('fonts/YRDZST-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+.YRDZST{font-family: 'YRDZST-Semibold'; font-size: 17px; font-weight: 600;}

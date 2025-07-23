@@ -1,0 +1,121 @@
+/*Next*/
+.topPosition {
+	position: sticky; 
+	position: -webkit-sticky; 
+	float: right; 
+	top: 0; 
+	width: 30px; 
+	padding: 10px 20px; 
+	background: none; 
+	border-style: hidden; 
+	border-width: thin; 
+	border-color: #000
+}
+
+#myBtn {
+  position: relative;
+  right: 30px;
+  display: none;
+  z-index: 9;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #d25124; /*red*/
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 40px;
+  opacity: 0.3;
+}
+
+#myBtn:hover {
+  opacity:1;
+}
+
+/*Next*/
+.jumpTo:hover {
+    color: #8000ff;
+
+	font-weight: 400;
+}
+
+/* Style the sidenav links and the dropdown button */
+/*.sidenav a, .dropdown-btn {*/
+.dropdown-btn {
+    padding: 6px 8px 6px 16px;
+	border-radius: 0px !important;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+	opacity:1;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+    color: yellow;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+    background-color: #585c63; /*nekocolor*/
+    color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+    display: none;
+    padding-left: 8px;
+}
+/*Next part here*/
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+	background-image: linear-gradient(to bottom, black, lightblue);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+/*--Below control fontsize on the link and X button*/
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;					
+    color: white;
+    display: block;
+    transition: 0.5s;
+}
+
+
+ .closebtn {
+    position: absolute;
+    top: 0;
+    right: 8px;             <!--This is X button position-->
+    font-size: 36px;
+    margin-left: 50px;
+	color: black;
+}
+
+#main {
+    transition: margin-left 0.5s;
+
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/*Next*/
