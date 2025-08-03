@@ -1,18 +1,116 @@
 <!DOCTYPE html>
 <html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
   <title>Hello World</title>
 </head>
-  
-<body>
-<h1>Hello World</h1>
-<p>Saya ulang!!! </p>
-<p>Hari ini dalam pilihan raya kita menang... saya umum</p>  
-<p>Extra holiday, helicopter money, RON95 jatuh...</p>
-<p>Ingat, di mana kita jatuh, di situ la kita bangkit!</p>
-<p>世上只有安华好，有华的日子像个宝</p>
-<p>离开安华的怀抱，幸福哪里找 ~</p>  
-<a href="https://makeitstick.github.io/letter.html">Make it stick</a>
-</body>
-  
-</html>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  margin:0;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size:17px;
+  color:#926239;
+  line-height:1.6;
+}
+
+#showcase{
+  background-image:url('http://traversymedia.com/downloads/assets/beachshowcase.jpg');
+  background-size:cover;
+  background-position:center;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:0 20px;
+}
+
+#showcase h1{
+  font-size:50px;
+  line-height:1.2;
+}
+
+#showcase p{
+  font-size:20px;
+}
+
+#showcase .button{
+  font-size:18px;
+  text-decoration:none;
+  color:#926239;
+  border:#926239 1px solid;
+  padding:10px 20px;
+  border-radius:10px;
+  margin-top:20px;
+}
+
+#showcase .button:hover{
+  background:#926239;
+  color:#fff;
+}
+
+#section-a{
+  padding:20px;
+  background:#926239;
+  color:#fff;
+  text-align:center;
+}
+
+#section-b{
+  padding:20px;
+  background:#f4f4f4;
+  text-align:center;
+}
+
+#section-c{
+  display:flex;
+}
+
+#section-c div{
+  padding:20px;
+}
+
+#section-c .box-1, #section-c .box-3{
+  background:#926239;
+  color:#fff;
+}
+
+#section-c .box-2{
+  background:#f9f9f9;
+}
+</style>
+
+
+<header id="showcase">
+    <h1>Hello World</h1>
+    <p>Anything you want to remember must be periodically recalled from memory.</p>
+    <a href="https://makeitstick.github.io/letter.html" class="button">Make it stick</a>
+</header>
+  <section id="section-a">
+    <p>You will experience setbacks. These are signs of effort, not of failure.</p>
+  </section>
+  <section id="section-b">
+    <p>迷路是走路的一部分</p>
+  </section>
+
+<!--
+  <section id="section-c">
+    <div class="box-1">
+      If you hand people the solution, they don't need to explore how you got to that solution. If they generate the solution, then they are the ones who are travelling down the road.
+    </div>
+    <div class="box-2">
+      Keep it up. Soon enough you will forget it was even a problem.
+    </div>
+    <div class="box-3">
+      Kaizen is a Japanese term for improvement.
+    </div>
+  </section>
+ ->>
