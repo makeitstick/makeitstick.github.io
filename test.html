@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Testing in progress</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">-->
+<link rel="icon" type="image/ico" href="images/favicon.ico">
+<link rel="stylesheet" href="css/css001.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-quarter img{margin-bottom: -6px; cursor: pointer}
+.w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
+.w3-quarter p {display: none;} /* Initially hide paragraphs */
+#caption {text-align: center;} /* Left-align the modal caption */
+</style>
+</head>
+<body class="w3-light-grey">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
+  <!--<a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">CLOSE</a>-->
+  <a href="https://makeitstick.github.io/letter.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">AU REVOIR</a> 
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding"><a href="https://makeitstick.github.io" style="text-decoration: none;">CARPE DIEM</a></span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content" style="max-width:1200px;margin-top:83px">
+
+  <!-- Photo grid -->
+  <div class="w3-row w3-grayscale-min">
+   <div class="w3-quarter">
+      <img src="images/test/girl.jpg" style="width:100%" onclick="onClick(this, 'caption001')" alt="">
+	  <p id="caption001">Stories have a magical way of teaching life lessons that stay with us forever.</p>
+      	  
+	  <img src="images/test/girl.jpg" style="width:100%" onclick="onClick(this, 'caption002')" alt="">
+	  <p id="caption002">自己吓自己</p>
+		  
+      <img src="images/test/girl.jpg" style="width:100%" onclick="onClick(this, 'caption003')" alt="">     
+	  <p id="caption003">third paragraph content</p>
+   </div>
+    
+   <div class="w3-quarter">
+      <img src="images/test/boy.jpg" style="width:100%" onclick="onClick(this, 'caption004')" alt="">
+	  <p id="caption004">444</p>
+      	  
+	  <img src="images/test/boy.jpg" style="width:100%" onclick="onClick(this, 'caption005')" alt="">
+	  <p id="caption005">555</p>
+		  
+      <img src="images/test/boy.jpg" style="width:100%" onclick="onClick(this, 'caption006')" alt="">     
+	  <p id="caption006">666</p>
+   </div>
+    
+    <div class="w3-quarter">
+      <img src="images/test/natureboy.jpg" style="width:100%" onclick="onClick(this, 'caption007')" alt="">
+	  <p id="caption007">777</p>
+      	  
+	  <img src="images/test/natureboy.jpg" style="width:100%" onclick="onClick(this, 'caption008')" alt="">
+	  <p id="caption008">888</p>
+		  
+      <img src="images/test/natureboy.jpg" style="width:100%" onclick="onClick(this, 'caption009')" alt="">     
+	  <p id="caption009">999</p>
+    </div>
+	
+	<div class="w3-quarter">
+      <img src="images/test/girl_train.jpg" style="width:100%" onclick="onClick(this, 'caption010')" alt="">
+	  <p id="caption010">101010</p>
+      	  
+	  <img src="images/test/girl_train.jpg" style="width:100%" onclick="onClick(this, 'caption011')" alt="">
+	  <p id="caption011">111111</p>
+		  
+      <img src="images/test/girl_train.jpg" style="width:100%" onclick="onClick(this, 'caption012')" alt="">     
+	  <p id="caption012">121212</p>
+    </div>
+
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+function onClick(element, captionId) {
+  // Show modal with image
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  
+  // Display paragraph content in modal using the specific caption ID
+  var captionText = document.getElementById("caption");
+  var paragraph = document.getElementById(captionId);
+  captionText.innerHTML = paragraph ? paragraph.innerHTML : element.alt;
+}
+</script>
+
+</body>
+</html>
