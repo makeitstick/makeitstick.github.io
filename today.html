@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,46 +39,52 @@ body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
   <!-- Photo grid -->
   <div class="w3-row w3-grayscale-min">
-    <div class="w3-quarter">
-      <img src="images/test/girl.jpg" style="width:100%" onclick="onClick(this)" alt="">
-	  <p><br><br>Stories have a magical way of teaching life lessons that stay with us forever. Short moral stories are entertaining and inspiring for kids, helping them grasp important values in fun and memorable ways. Instead of simply telling children what is right or wrong, these tales weave lessons into adventures, making them easy to understand and connect with.<br><br>These ten carefully selected stories are perfect for sparking both imagination and wisdom. Each one offers a meaningful takeaway, whether about kindness, hard work, humility, or perseverance. Parents and teachers can use these short stories to guide children toward becoming kind-hearted and thoughtful individuals.</p>
+   <div class="w3-quarter">
+      <img src="images/test/girl.jpg" style="width:100%" onclick="onClick(this, 'caption001')" alt="">
+	  <p id="caption001">Stories have a magical way of teaching life lessons that stay with us forever.</p>
       	  
-	  <img src="images/test/girl.jpg" style="width:100%" onclick="onClick(this)" alt="Quiet day at the beach. Cold, but beautiful">
-      <img src="images/test/girl.jpg" style="width:100%" onclick="onClick(this)" alt="The Beach. Me. Alone. Beautiful">     
+	  <img src="images/test/girl.jpg" style="width:100%" onclick="onClick(this, 'caption002')" alt="">
+	  <p id="caption002">自己吓自己</p>
+		  
+      <img src="images/test/girl.jpg" style="width:100%" onclick="onClick(this, 'caption003')" alt="">     
+	  <p id="caption003">third paragraph content</p>
    </div>
     
    <div class="w3-quarter">
-      <img src="images/test/boy.jpg" style="width:100%" onclick="onClick(this)" alt="A girl, and a train passing">
-      <img src="images/test/boy.jpg" style="width:100%" onclick="onClick(this)" alt="Waiting for the bus in the desert">
-      <img src="images/test/boy.jpg" style="width:100%" onclick="onClick(this)" alt="Nature again.. At its finest!">
-    </div>
+      <img src="images/test/boy.jpg" style="width:100%" onclick="onClick(this, 'caption004')" alt="">
+	  <p id="caption004">444</p>
+      	  
+	  <img src="images/test/boy.jpg" style="width:100%" onclick="onClick(this, 'caption005')" alt="">
+	  <p id="caption005">555</p>
+		  
+      <img src="images/test/boy.jpg" style="width:100%" onclick="onClick(this, 'caption006')" alt="">     
+	  <p id="caption006">666</p>
+   </div>
     
     <div class="w3-quarter">
-      <img src="images/test/man_bench.jpg" style="width:100%" onclick="onClick(this)" alt="Waiting for the bus in the desert">
-      <img src="images/test/man_bench.jpg" style="width:100%" onclick="onClick(this)" alt="What a beautiful scenery this sunset">
-      <img src="images/test/man_bench.jpg" style="width:100%" onclick="onClick(this)" alt="The Beach. Me. Alone. Beautiful">
+      <img src="images/test/natureboy.jpg" style="width:100%" onclick="onClick(this, 'caption007')" alt="">
+	  <p id="caption007">777</p>
+      	  
+	  <img src="images/test/natureboy.jpg" style="width:100%" onclick="onClick(this, 'caption008')" alt="">
+	  <p id="caption008">888</p>
+		  
+      <img src="images/test/natureboy.jpg" style="width:100%" onclick="onClick(this, 'caption009')" alt="">     
+	  <p id="caption009">999</p>
     </div>
 	
 	<div class="w3-quarter">
-      <img src="images/test/girl_train.jpg" style="width:100%" onclick="onClick(this)" alt="Waiting for the bus in the desert">
-      <img src="images/test/girl_train.jpg" style="width:100%" onclick="onClick(this)" alt="What a beautiful scenery this sunset">
-      <img src="images/test/girl_train.jpg" style="width:100%" onclick="onClick(this)" alt="The Beach. Me. Alone. Beautiful">
+      <img src="images/test/girl_train.jpg" style="width:100%" onclick="onClick(this, 'caption010')" alt="">
+	  <p id="caption010">101010</p>
+      	  
+	  <img src="images/test/girl_train.jpg" style="width:100%" onclick="onClick(this, 'caption011')" alt="">
+	  <p id="caption011">111111</p>
+		  
+      <img src="images/test/girl_train.jpg" style="width:100%" onclick="onClick(this, 'caption012')" alt="">     
+	  <p id="caption012">121212</p>
     </div>
 
   </div>
 
-  <!-- Pagination 
-  <div class="w3-center w3-padding-32">
-    <div class="w3-bar">
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
-    </div>
-  </div>-->
-  
   <!-- Modal for full size images on click-->
   <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
     <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
@@ -102,23 +109,17 @@ function w3_close() {
   document.getElementById("myOverlay").style.display = "none";
 }
 
-// Modal Image Gallery and Paragraph Display
-function onClick(element) {
+function onClick(element, captionId) {
   // Show modal with image
   document.getElementById("img01").src = element.src;
   document.getElementById("modal01").style.display = "block";
   
-  // Get paragraph content from the same w3-quarter div
-  var parentDiv = element.closest('.w3-quarter');
-  var paragraph = parentDiv.querySelector('p');
+  // Display paragraph content in modal using the specific caption ID
   var captionText = document.getElementById("caption");
-  
-  // Display paragraph content in modal if it exists, otherwise use image alt text
+  var paragraph = document.getElementById(captionId);
   captionText.innerHTML = paragraph ? paragraph.innerHTML : element.alt;
 }
-
 </script>
-
 
 </body>
 </html>
