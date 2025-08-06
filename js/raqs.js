@@ -13,6 +13,14 @@ const FAQData = [
       "The objective of setting a target is not necessarily to reach it, but rather to establish a standard against which to measure your performance. If you are not reaching your target, it forces you to focus on what you are doing wrong or what you may not be doing that you should. The target holds you to a higher standard of performance.",
     ],
   },
+  {
+    question: "If my ex makes nasty comments about me to the children, I should just ignore them?",
+    answer: [
+      "The way one spouse talks about the other will be a crucial lesson for the children to observe. The fact that one spouse responds in an immature way is certainly no license for the other spouse to do the same.",
+	  "Two immature parents will teach the children how to resolve conflicts in an immature manner. One mature parent responding to life's conflicts in a mature manner can show the children an alternative way of dealing with differences of opinion.",
+	  "The greater the contrast in attitudes, the greater the illustration.",
+    ],
+  },
   /*  {
     question: "Can I assign a task to someone else?",
     answer: [
