@@ -7,30 +7,29 @@ const FAQData = [
       //'<a href="https://makeitstick.github.io/index.html">Make it stick</a>',
     ],
   },
-  {
-    question: "What are the implications of setting a target and then not reaching it? Certainly not everyone sets a higher target makes it.",
+  
+ /* {
+    question: "What are the implications of setting a target and then not reaching it?",
     answer: [
       "The objective of setting a target is not necessarily to reach it, but rather to establish a standard against which to measure your performance. If you are not reaching your target, it forces you to focus on what you are doing wrong or what you may not be doing that you should. The target holds you to a higher standard of performance.",
     ],
   },
+  
   {
-    question: "If my ex makes nasty comments about me to the children, I should just ignore them?",
+    question: "How to raise a child?",
     answer: [
-      "The way one spouse talks about the other will be a crucial lesson for the children to observe. The fact that one spouse responds in an immature way is certainly no license for the other spouse to do the same.",
-	  "Two immature parents will teach the children how to resolve conflicts in an immature manner. One mature parent responding to life's conflicts in a mature manner can show the children an alternative way of dealing with differences of opinion.",
-	  "The greater the contrast in attitudes, the greater the illustration.",
+      "A child needs to grow up with the opportunity to watch his parents or a parent live out a daily philosophy of life. Children learn not from lectures, but from lifestyles — not with their ears but with their eyes.",
+    ],
+  },  
+  
+  {
+    question: "What is a communication?",
+    answer: [
+      "Communication is dependent on the recipient. When the recipient has filtered the message through their frame of reference, prejudices, and experiences, what remains is what they understand. Regardless of what you actually meant.",
     ],
   },
-  /*  {
-    question: "Can I assign a task to someone else?",
-    answer: [
-      "Yes, you can assign a task to someone else.",
-      "While creating or editing a task, you will find an 'Assignee' field.",
-      "Start typing the name or email of the person you want to assign the task to, and select their name from the suggestions.",
-      "The assigned person will receive a notification about the task.",
-    ],
-  },
-{
+  
+ {
     question: "How can I track the progress of a task?",
     answer: [
       "111",
