@@ -4,18 +4,18 @@ const FAQData = [
     answer: [
       "不要努力做一个成功的人，而要努力做一个有价值的人。成功的人会收获很多，而有价值的人会给予他人更多。 ~ 李永乐老师译",
 	  "Try not to become a man of success, but rather try to become a man of value. ~ Albert Einstein",
-      //'<a href="https://makeitstick.github.io/index.html">Make it stick</a>',
     ],
   },
   
- /* {
-    question: "What are the implications of setting a target and then not reaching it?",
+ {
+    question: "迷失了方向，如何是好？",
     answer: [
-      "The objective of setting a target is not necessarily to reach it, but rather to establish a standard against which to measure your performance. If you are not reaching your target, it forces you to focus on what you are doing wrong or what you may not be doing that you should. The target holds you to a higher standard of performance.",
+      "那就回到这里吧。这里有着几乎所有二十岁那年，你所要知道的事情。那些年，那些文字；那些图，那些故事。",
+	  '<a href="https://makeitstick.github.io/letter.html">诗和远方、排骨和汤、你的信箱</a>',
     ],
   },
   
-  {
+ /*  {
     question: "How to raise a child?",
     answer: [
       "A child needs to grow up with the opportunity to watch his parents or a parent live out a daily philosophy of life. Children learn not from lectures, but from lifestyles — not with their ears but with their eyes.",
