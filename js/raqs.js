@@ -10,15 +10,15 @@ const FAQData = [
  {
     question: "迷失了方向，如何是好？",
     answer: [
-      "那就回到这里吧。这里有着几乎所有二十岁那年，你所要知道的事情。那些年，那些文字；那些图，那些故事。",
+      "那就回到这里吧。这里有着二十岁那年，你所要知道的事情。那些年，那些文字；那些图，那些故事。",
 	  '<a href="https://makeitstick.github.io/letter.html">诗和远方、排骨和汤、你的信箱</a>',
     ],
   },
   
  /*  {
-    question: "How to raise a child?",
+    question: "Am I working on what I most want to work on?",
     answer: [
-      "A child needs to grow up with the opportunity to watch his parents or a parent live out a daily philosophy of life. Children learn not from lectures, but from lifestyles — not with their ears but with their eyes.",
+      "When you are young, it is okay if the answer is sometimes no, but this gets increasingly dangerous as you get older.",
     ],
   },  
   
