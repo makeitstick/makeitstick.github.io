@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+			font-size: 14px;
+            margin: 20px;
+        }
+		.emphasis { color: red; }
+        .comment { color: green; }
+		.keyword { color: blue; }
+        .string { color: purple; }
+        .accordion {
+            background-color: #f4f4f4;
+            padding: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .accordion:hover {
+            background-color: #e0e0e0;
+        }
+        .panel {
+            padding: 10px;
+            display: none;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+			overflow: auto;
+        }
+        .panel.show {
+            display: block;
+        }
+        .copy-btn {
+            float: right;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .copy-btn:hover {
+            background-color: #0056b3;
+        }
+        pre {
+            background-color: #f8f8f8;
+            padding: 10px;
+            border-radius: 5px;
+			overflow:auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+}
+    </style>
+</head>
+<body>
+    <h3>How I met your SQL</h3>
+    <div class="accordion"><strong>01 How to join table?</strong></div>
+<!--01-->
+    <div class="panel">
+        <button class="copy-btn" onclick="copyCode(this)">Copy Code</button><br>
+<pre><span class="keyword">SELECT</span>
+c1.pkey, 
+c1.acctno,
+c1.category,
+dc1.category <span class="keyword">AS</span> <span class="string">"CATEGORY_READABLE"</span>
+
+<span class="keyword">FROM</span> customer c1
+<span class="keyword">LEFT JOIN</span> debtorcategory dc1
+
+<span class="keyword">ON</span> c1.category = dc1.pkey; <span class="comment"> -- Table1 forkey matches with Table2 pkey</span></pre>
+	</div>
+        
+		<!--<table>
+            <tr>
+                <th>Code</th>
+                <th>Explanation</th>
+            </tr>
+            <tr>
+                <td>
+                    <pre><span class="keyword">ON</span> c1.category = dc1.pkey</pre>
+                </td>
+                <td>Table1 <span class="emphasis">forkey</span> matches with Table2 <span class="emphasis">pkey</span></td>
+            </tr>
+        </table>-->
+	
+<!--02-->
+    <br><div class="accordion"><strong>02 How to join multiple tables?</strong></div>
+    <div class="panel">
+        <button class="copy-btn" onclick="copyCode(this)">Copy Code</button><br>
+<pre><span class="keyword">SELECT</span>
+p1.productid,
+p1.productname,
+p1.category,
+sc1.category <span class="keyword">AS</span> <span class="string">"CATEGORY_READABLE"</span>,
+p1.unitofmeasure,
+um1.unit
+
+<span class="keyword">FROM</span> product p1
+
+<span class="keyword">LEFT JOIN</span> stockcategory sc1
+<span class="keyword">ON</span> p1.category = sc1.pkey
+
+<span class="keyword">LEFT JOIN</span> unitmeasure um1
+<span class="keyword">ON</span> p1.unitofmeasure = um1.pkey
+
+<span class="keyword">WHERE</span> productid <span class="keyword">IN</span> ('APPLE', 'ORANGE', 'PETAI'); <span class="comment"> -- To list out only certain products</span></pre>
+    </div>
+
+<!--03-->
+    <br><div class="accordion"><strong>03 List out all the tables</strong></div>
+    <div class="panel">
+        <button class="copy-btn" onclick="copyCode(this)">Copy Code</button><br>
+<pre><span class="keyword">SELECT</span> RDB$RELATION_NAME
+<span class="keyword">FROM</span> RDB$RELATIONS
+<span class="keyword">WHERE</span> RDB$SYSTEM_FLAG = 0;</pre>
+    </div>
+
+<!--04-->
+    <br><div class="accordion"><strong>04 Count all the tables</strong></div>
+    <div class="panel">
+        <button class="copy-btn" onclick="copyCode(this)">Copy Code</button><br>
+<pre><span class="keyword">SELECT</span> COUNT(RDB$RELATION_NAME)
+<span class="keyword">FROM</span> RDB$RELATIONS
+<span class="keyword">WHERE</span> RDB$SYSTEM_FLAG = 0;</pre>
+    </div>
+
+<!--05-->
+    <br><div class="accordion"><strong>05 List out all the fields</strong></div>
+    <div class="panel">
+        <button class="copy-btn" onclick="copyCode(this)">Copy Code</button><br>
+<pre><span class="keyword">SELECT</span> RDB$FIELD_NAME
+<span class="keyword">FROM</span> RDB$RELATION_FIELDS
+<span class="keyword">WHERE</span> RDB$RELATION_NAME = 'YOUR_TABLE_NAME'; <span class="comment"> -- YOUR_TABLE_NAME is case sensitive</span></pre>
+    </div>
+	
+<!--06-->
+    <br><div class="accordion"><strong>06 List out all the tables and fields</strong></div>
+    <div class="panel">
+        <button class="copy-btn" onclick="copyCode(this)">Copy Code</button><br>
+<pre><span class="keyword">SELECT</span> RDB$RELATION_NAME, RDB$FIELD_NAME
+<span class="keyword">FROM</span> RDB$RELATION_FIELDS
+
+<span class="keyword">WHERE</span> RDB$RELATION_NAME IN (
+    SELECT RDB$RELATION_NAME 
+    FROM RDB$RELATIONS 
+    WHERE RDB$SYSTEM_FLAG = 0
+)
+
+
+<span class="keyword">ORDER BY</span> RDB$RELATION_NAME, RDB$FIELD_NAME;</pre>
+    </div>
+	
+<!--07-->
+    <br><div class="accordion"><strong>07 List out all the tables, fields, type and length</strong></div>
+    <div class="panel">
+        <button class="copy-btn" onclick="copyCode(this)">Copy Code</button><br>
+<pre><span class="keyword">SELECT</span>
+    rf.RDB$RELATION_NAME, 
+    rf.RDB$FIELD_NAME, 
+    CASE f.RDB$FIELD_TYPE
+        WHEN 7 THEN 'SMALLINT'
+        WHEN 8 THEN 'INTEGER'
+        WHEN 10 THEN 'FLOAT'
+        WHEN 12 THEN 'DATE'
+        WHEN 13 THEN 'TIME'
+        WHEN 14 THEN 'CHAR'
+        WHEN 16 THEN 'BIGINT'
+        WHEN 27 THEN 'DOUBLE PRECISION'
+        WHEN 35 THEN 'TIMESTAMP'
+        WHEN 37 THEN 'VARCHAR'
+        WHEN 40 THEN 'CSTRING'
+        WHEN 261 THEN 'BLOB'
+        ELSE 'UNKNOWN'
+    END AS FIELD_TYPE,
+    f.RDB$FIELD_LENGTH
+	
+<span class="keyword">FROM</span> RDB$RELATION_FIELDS rf
+<span class="keyword">JOIN</span> RDB$FIELDS f ON rf.RDB$FIELD_SOURCE = f.RDB$FIELD_NAME
+
+<span class="keyword">WHERE</span> rf.RDB$RELATION_NAME IN (
+    SELECT RDB$RELATION_NAME 
+    FROM RDB$RELATIONS 
+    WHERE RDB$SYSTEM_FLAG = 0
+)
+<span class="keyword">ORDER BY</span> rf.RDB$RELATION_NAME, rf.RDB$FIELD_NAME;</pre>
+    </div>	
+
+<!--08-->
+    <br><div class="accordion"><strong>08 Casting to human readable text</strong></div>
+    <div class="panel">
+        <button class="copy-btn" onclick="copyCode(this)">Copy Code</button><br>
+<pre><span class="keyword">SELECT</span>
+acctno, 
+<span class="keyword">CAST</span>(remarks <span class="keyword">AS VARCHAR</span>(1000)) <span class="keyword">AS</span> readable_text
+
+<span class="keyword">FROM</span> customer
+<span class="keyword">ORDER BY</span> readable_text <span class="keyword">DESC</span> <span class="comment"> -- DESCending or ASCending</span></pre>
+    </div>
+	
+<!--09-->
+    <br><div class="accordion"><strong>09 List out Chart of Account</strong></div>
+    <div class="panel">
+        <button class="copy-btn" onclick="copyCode(this)">Copy Code</button><br>
+<pre><span class="keyword">SELECT</span>
+accountcode <span class="keyword">AS</span> "Account Code",
+name <span class="keyword">AS</span> "Account Name",
+secname <span class="keyword">AS</span> "Secondary Name",
+detailtypeorgroup <span class="keyword">AS</span> "Type",
+acctlevel <span class="keyword">AS</span> "Level",
+drcr <span class="keyword">AS</span> "Debit/Credit",
+status <span class="keyword">AS</span> "Status",
+headertype <span class="keyword">AS</span> "Header Type"
+
+<span class="keyword">FROM</span> account</pre>
+    </div>	
+
+<!--10-->
+    <br><div class="accordion"><strong>10 List out data for two particular customers</strong></div>
+    <div class="panel">
+        <button class="copy-btn" onclick="copyCode(this)">Copy Code</button><br>
+<pre><span class="keyword">SELECT</span> acctno, name
+
+<span class="keyword">FROM</span> customer 
+<span class="keyword">WHERE</span> acctno
+
+<span class="keyword">IN</span> ('001', '002')</pre>
+    </div>
+	
+<!--11-->
+    <br><div class="accordion"><strong>11 List out first 100 records from the product table</strong></div>
+    <div class="panel">
+        <button class="copy-btn" onclick="copyCode(this)">Copy Code</button><br>
+<pre><span class="keyword">SELECT</span> productid, brand, productname, description
+
+<span class="keyword">FROM</span> product
+<span class="keyword">ORDER BY</span> productid
+
+<span class="keyword">ROWS</span> 100;</pre>
+    </div>	
+	
+<!--12-->
+    <br><div class="accordion"><strong>12 Total amount, amount paid and balance from Sales Invoice table</strong></div>
+    <div class="panel">
+        <button class="copy-btn" onclick="copyCode(this)">Copy Code</button><br>
+<pre><span class="keyword">SELECT</span>
+s1.transno,
+s1.txdate,
+s1.customer <span class="keyword">AS</span> "CUSTOMER PKEY",
+c1.acctno,
+s1.customername,
+s1.totalamt,
+s1.amtpaid,
+<span class="keyword">ROUND</span>(totalamt - amtpaid, 4) <span class="keyword">AS</span> balance <span class="comment"> -- balance rounding up to 4 decimal places</span>
+
+<span class="keyword">FROM</span> salesinvoice s1
+
+<span class="keyword">JOIN</span> customer c1
+<span class="keyword">ON</span> s1.customer = c1.pkey <span class="comment"> -- Table1 forkey matches with Table2 pkey</span>
+
+<span class="keyword">WHERE</span> txdate >= '01-JAN-2025' <span class="keyword">AND</span> txdate <= '31-JAN-2025'
+<span class="keyword">ORDER BY</span> balance DESC
+
+<span class="keyword">ROWS</span> 100; <span class="comment"> -- showing first 100 records</span></pre>
+    </div>
+
+<!--13-->
+    <br><div class="accordion"><strong>13 List out those tables match with certain keyword</strong></div>
+    <div class="panel">
+        <button class="copy-btn" onclick="copyCode(this)">Copy Code</button><br>
+<pre><span class="keyword">SELECT</span>
+RDB$RELATION_NAME
+
+<span class="keyword">FROM</span> RDB$RELATIONS
+<span class="keyword">WHERE</span> RDB$SYSTEM_FLAG = 0
+
+<span class="keyword">AND</span> RDB$RELATION_NAME <span class="keyword">LIKE</span> '%COMPANY%'; <span class="comment">-- List out those records match with COMPANY</span></pre>
+    </div>
+
+	
+
+    <script>
+        document.querySelectorAll('.accordion').forEach(button => {
+            button.addEventListener('click', () => {
+                const panel = button.nextElementSibling;
+                panel.classList.toggle('show');
+            });
+        });
+
+        function copyCode(button) {
+            const code = button.parentElement.querySelector('pre').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                button.textContent = 'Copied!';
+                setTimeout(() => {
+                    button.textContent = 'Copy Code';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
