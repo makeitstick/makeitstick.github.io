@@ -15,14 +15,15 @@ const FAQData = [
     ],
   },
   
- /*  {
-    question: "Am I working on what I most want to work on?",
+  {
+    question: "I am stuck. What should I do?",
     answer: [
-      "When you are young, it is okay if the answer is sometimes no, but this gets increasingly dangerous as you get older.",
+      " Utilize AI. Hey, this is 2025. They are your mentors. They are your aha moment. They are here to serve you.  ",
+	  " Grok 刘德华； ChatGPT 张学友； Copilot 郭富城； DeepSeek 黎明",
     ],
   },  
   
-  {
+ /*  {
     question: "What is a communication?",
     answer: [
       "Communication is dependent on the recipient. When the recipient has filtered the message through their frame of reference, prejudices, and experiences, what remains is what they understand. Regardless of what you actually meant.",
