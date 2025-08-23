@@ -18,7 +18,8 @@ const FAQData = [
   {
     question: "I am stuck. What should I do?",
     answer: [
-      "Utilize AI. This is 2025. They are your mentors. They are your aha moment. They are the leading tools. To lead is to serve. They are here to serve you.",
+      "Utilize AI. This is 2025. ",
+	  "They are your mentors. They are your aha moment. They are the leading tools. To lead is to serve. They are here to serve you.",
 	  "Grok 刘德华； ChatGPT 张学友； Copilot 郭富城； DeepSeek 黎明",
     ],
   },  
