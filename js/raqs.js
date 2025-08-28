@@ -18,20 +18,21 @@ const FAQData = [
   {
     question: "I am stuck. What should I do?",
     answer: [
-      "Utilize AI. This is 2025. ",
+      "Utilize AI. This is 2025.",
 	  "They are your mentors. They are your aha moment. They are the leading tools. To lead is to serve. They are here to serve you.",
 	  "Grok 刘德华； ChatGPT 张学友； Copilot 郭富城； DeepSeek 黎明",
     ],
   },  
   
- /*  {
-    question: "What is a communication?",
+  {
+    question: "How to do great work?",
     answer: [
-      "Communication is dependent on the recipient. When the recipient has filtered the message through their frame of reference, prejudices, and experiences, what remains is what they understand. Regardless of what you actually meant.",
+      "Search for the paragraph <strong>Use the advantages of youth...</strong>",
+	  '<a href="https://www.paulgraham.com/greatwork.html">那些二十岁我想知道的事</a>',
     ],
   },
   
- {
+  /*{
     question: "How can I track the progress of a task?",
     answer: [
       "111",
