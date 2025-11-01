@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Today ... Season 2</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">-->
+<link rel="icon" type="image/ico" href="images/favicon.ico">
+<link rel="stylesheet" href="css/today.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-quarter img{margin-bottom: -6px; cursor: pointer}
+.w3-quarter img:hover{opacity: 0.6; transition: 0.3s}
+.w3-quarter p {display: none;} /* Initially hide paragraphs */
+#caption {text-align: center;} /* Left-align the modal caption */
+</style>
+</head>
+<body class="w3-light-grey">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index:3;width:250px;font-weight:bold;display:none;right:0;" id="mySidebar">
+  <!--<a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">CLOSE</a>-->
+  <a href="https://makeitstick.github.io/letter.html" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">信箱</a> 
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding"><a href="https://makeitstick.github.io" style="text-decoration: none;">CARPE DIEM</a></span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content" style="max-width:1200px;margin-top:83px">
+
+  <!-- Photo grid -->
+  <div class="w3-row w3-grayscale-min">
+   <div class="w3-quarter">
+      <img src="images/todays2/D6.gif" title="YYYYMMDD" style="width:100%" onclick="onClick(this, 'captionD6', 'audio/todays2/D6.mp3')" alt="">
+<p id="captionD6"><br>
+我也喜欢名牌。<br><br>
+
+我喜欢苹果。<br><br>
+
+平常会到 NSK 买几粒 Apple 怀念一下 Steve Jobs.<br><br>
+
+我喜欢刘德华。<br><br>
+
+从小立志跟黄牛抢最便宜的演唱会门票。<br><br>
+
+最近我还看中一只变脸 Labubu，心痒痒。<br><br>
+
+心痒痒是否就是一见钟情？<br><br>
+
+也难怪。<br><br>
+
+每次这里痒，那里痒。<br><br>
+
+不管了。<br><br>
+
+我要开始存钱！<br><br>
+
+一天一块。<br><br>
+
+十天后，刚好出粮，那时候是世界首富。<br><br>
+
+我就把它带回家，如果它还在。<br><br>
+
+有了仪式感，时间一分一秒，都是神圣与期待。<br><br>
+
+等待的过程中，它会让你觉得是否值得。<br><br>
+
+如果不是，那也就算了，当初只不过是一时冲动。<br><br>
+
+如果是，得到以后，或许就会更珍惜。是吗？<br><br>
+
+它不再是一只普通的 Labubu.<br><br>
+
+它是一只有故事、有生命、有回忆的 Labubu.<br><br>
+
+赋予即是富裕。<br><br>
+
+因为有你，在我的身边，我已经是，全世界，最有钱的人。
+</p>
+	        	  
+	  <img src="images/today/XX.webp" title="YYYYMMDD" style="width:100%" onclick="onClick(this, 'captionD5', 'audio/todays2/XX.mp3')" alt="">
+<p id="captionD5"><br>
+道理都懂，只是真正懂的时候，已经不再是二十岁。
+</p>
+		  
+      <img src="images/today/XX.webp" style="width:100%" onclick="onClick(this, 'captionD4', 'audio/todays2/XX.mp3')" alt="">     
+	  <p id="captionD4">D4</p>
+	  
+	  <img src="images/today/XX.webp" title="YYYYMMDD" style="width:100%" onclick="onClick(this, 'captionD3', 'audio/todays2/XX.mp3')" alt="">
+<p id="captionD3"><br>
+That is how I met your mother.
+</p>
+      	  
+	  <img src="images/today/XX.webp" title="YYYYMMDD" style="width:100%" onclick="onClick(this, 'captionD2', 'audio/todays2/XX.mp3')" alt="">
+<p id="captionD2"><br>
+We live and die in the shadows, for those we hold close, and for those we never meet.
+</p>
+		  
+      <img src="images/today/XX.webp" title="YYYYMMDD" style="width:100%" onclick="onClick(this, 'captionD1', 'audio/todays2/XX.mp3')" alt="">     
+<p id="captionD1"><br>
+两年后，我不再是 INFJ-A
+</p>
+   </div>
+    
+   <div class="w3-quarter">
+      <img src="images/today/XX.webp" title="YYYYMMDD" style="width:100%" onclick="onClick(this, 'captionC6', 'audio/todays2/XX.mp3')" alt="">
+<p id="captionC6"><br>
+From now on, go slay your dragon.
+</p>
+      	  
+	  <img src="images/today/XX.webp" title="YYYYMMDD" style="width:100%" onclick="onClick(this, 'captionC5', 'audio/todays2/XX.mp3')" alt="">
+<p id="captionC5"><br>
+看见蟑螂我不怕不怕啦，但是跑步没有蟑螂 ...
+</p>
+		  
+      <img src="images/today/XX.webp" title="YYYYMMDD" style="width:100%" onclick="onClick(this, 'captionC4', 'audio/todays2/XX.mp3')" alt="">     
+<p id="captionC4"><br>
+凡事都有期限，不要太迟，不要相信一切有下一次。
+</p>
+	  
+	  <img src="images/today/XX.webp" title="YYYYMMDD" style="width:100%" onclick="onClick(this, 'captionC3', 'audio/todays2/XX.mp3')" alt="">
+<p id="captionC3"><br>
+如果你要记得，那就要定时去接触它，这样它一辈子都跟随着你。
+</p>
+      	  
+	  <img src="images/today/XX.webp" title="SEASON 3" style="width:100%" onclick="onClick(this, 'captionC2')" alt="">
+	  <p id="captionC2">C2</p>
+		  
+      <img src="images/today/XX.webp" title="YYYYMMDD" style="width:100%" onclick="onClick(this, 'captionC1', 'audio/todays2/XX.mp3')" alt="">     
+<p id="captionC1"><br>
+九十九，它还是你的舞台秀。
+</p>
+   </div>
+    
+    <div class="w3-quarter">
+      <img src="images/today/XX.webp" title="YYYYMMDD" style="width:100%" onclick="onClick(this, 'captionB6', 'audio/todays2/XX.mp3')" alt="">
+<p id="captionB6"><br>
+如果迷失了方向，它就是你的方向。
+</p>
+      	  
+	  <img src="images/today/XX.webp" title="YYYYMMDD" style="width:100%" onclick="onClick(this, 'captionB5', 'audio/todays2/XX.mp3')" alt="">
+<p id="captionB5"><br>
+是的，我们。
+</p>
+		  
+      <img src="images/today/XX.webp" title="YYYYMMDD" style="width:100%" onclick="onClick(this, 'captionB4', 'audio/todays2/XX.mp3')" alt="">     
+<p id="captionB4"><br>
+精神 D，临时演员都係演员嚟 ～
+</p>
+	  
+	  <img src="images/today/XX.webp" title="YYYYMMDD" style="width:100%" onclick="onClick(this, 'captionB3', 'audio/todays2/XX.mp3')" alt="">
+<p id="captionB3"><br>
+<i>离开我 离开我</i>
+</p>
+      	  
+	  <img src="images/today/XX.webp" title="YYYYMMDD" style="width:100%" onclick="onClick(this, 'captionB2', 'audio/todays2/XX.mp3')" alt="">
+<p id="captionB2"><br>
+当太阳出现，它就会消失。
+</p>
+		  
+      <img src="images/today/XX.webp" title="YYYYMMDD" style="width:100%" onclick="onClick(this, 'captionB1', 'audio/todays2/XX.mp3')" alt="">     
+<p id="captionB1"><br>
+因为眼前出现一只 Fresh & White 北极熊。
+</p>
+    </div>
+	
+	<div class="w3-quarter">
+      <img src="images/today/XX.webp" title="YYYYMMDD" style="width:100%" onclick="onClick(this, 'captionA6', 'audio/todays2/XX.mp3')" alt="">
+<p id="captionA6"><br>
+我想写的就是这么一个故事。
+</p>
+      	  
+	  <img src="images/today/XX.webp" title="YYYYMMDD" style="width:100%" onclick="onClick(this, 'captionA5', 'audio/todays2/XX.mp3')" alt="">
+<p id="captionA5"><br>
+Long does matter.
+</p>
+		  
+      <img src="images/today/XX.webp" title="YYYYMMDD" style="width:100%" onclick="onClick(this, 'captionA4', 'audio/todays2/XX.mp3')" alt="">     
+	  <p id="captionA4">A4</p>
+	  
+	  <img src="images/today/XX.webp" title="YYYYMMDD" style="width:100%" onclick="onClick(this, 'captionA3', 'audio/todays2/XX.mp3')" alt="">
+<p id="captionA3"><br>
+再见有很多方式，谁又会知道你和我是哪一种方式？
+</p>
+      	  
+	  <img src="images/today/XX.webp" title="YYYYMMDD" style="width:100%" onclick="onClick(this, 'captionA2', 'audio/todays2/XX.mp3')" alt="">
+<p id="captionA2"><br>
+我看着那位还在吃着星洲米粉的同事，再望向手机屏幕，再把眼神放回她身上，怎么越看越像？
+</p>
+		  
+      <img src="images/today/XX.webp" title="YYYYMMDD" style="width:100%" onclick="onClick(this, 'captionA1', 'audio/todays2/XX.mp3')" alt="">     
+<p id="captionA1"><br>
+嘿，你生日快到了。二五女，生日快乐。
+</p>
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+	  <br><br>
+	  <audio id="modalAudio" controls style="display: block; margin: 0 auto;"></audio>
+	  <p id="caption"></p>
+
+    </div>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+function onClick(element, captionId, audioSrc) {
+  // Show modal with image
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  
+  // Display paragraph content in modal using the specific caption ID
+  var captionText = document.getElementById("caption");
+  var paragraph = document.getElementById(captionId);
+  captionText.innerHTML = paragraph ? paragraph.innerHTML : element.alt;
+  
+  // Run audio along with the modal
+  let audio = document.getElementById("modalAudio");
+  audio.src = audioSrc;
+  audio.play();
+}
+</script>
+
+</body>
+</html>
