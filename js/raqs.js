@@ -20,14 +20,14 @@ const FAQData = [
     answer: [
       "Utilize AI. This is 2025.",
 	  "They are your mentors. They are the leading tools. To lead is to serve. They are here to serve you.",
-	  '<a href="https://makeitstick.github.io/grok.html">Grok,</a>ChatGPT, Copilot, DeepSeek',
+	  '<a href="https://makeitstick.github.io/grok.html">Grok,</a>ChatGPT, Copilot, DeepSeek ...',
     ],
   },  
   
   {
     question: "How to do great work?",
     answer: [
-      "Search for the paragraph <strong>Use the advantages of youth...</strong>",
+      "Search for the paragraph <strong>Use the advantages of youth ...</strong>",
 	  '<a href="https://www.paulgraham.com/greatwork.html">那些二十岁我想知道的事</a>',
     ],
   },
