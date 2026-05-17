@@ -11,7 +11,7 @@ const FAQData = [
     question: "迷失了方向，如何是好？",
     answer: [
       "那就回到这里吧。这里有着二十岁那年，你所要知道的事情。那些年，那些文字；那些图，那些故事。",
-	  '<a href="https://makeitstick.github.io/letter.html">诗和远方、排骨和汤、你的信箱</a>',
+	  '<a href="https://makeitstick.github.io/letter.html">诗和远方、排骨和汤、你的信箱</a>'
     ],
   },
   
@@ -19,8 +19,8 @@ const FAQData = [
     question: "I am stuck. What should I do?",
     answer: [
       "Utilize AI. This is 2025.",
-	  "They are your mentors. They are your aha moment. They are the leading tools. To lead is to serve. They are here to serve you.",
-	  "Grok 刘德华； ChatGPT 张学友； Copilot 郭富城； DeepSeek 黎明",
+	  "They are your mentors. They are the leading tools. To lead is to serve. They are here to serve you.",
+	  '<a href="https://makeitstick.github.io/grok.html">Grok,</a>ChatGPT, Copilot, DeepSeek',
     ],
   },  
   
